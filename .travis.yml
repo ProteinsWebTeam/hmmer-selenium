@@ -1,6 +1,9 @@
 language: python
 python:
   - "3.5"
+before_install:
+  - "sh -e /etc/init.d/xvfb start"
+  - "export DISPLAY=:99.0"
 install:
   - pip install -r requirements.txt
 script:
