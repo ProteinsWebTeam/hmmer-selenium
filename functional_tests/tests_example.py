@@ -10,5 +10,5 @@ class HmmerExampleTestCase(HmmerWebTest):
         browser.find_element_by_css_selector("#example").click()
         self.assertNotEqual("", textarea.text, "The textarea should NOT be empty after clicking the example link")
         click_link_and_wait(browser.find_element_by_id("subbutton"))
-        title = browser.find_element_by_css_selector(".res_title h5")
+        title = browser.find_element_by_css_selector("div.row div.columns>h5")
         self.assertEqual("PHMMER Results", title.text, "The result title should be PHMMER Results")
