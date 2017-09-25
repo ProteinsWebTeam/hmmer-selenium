@@ -35,7 +35,7 @@ class HmmerWebTest(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
-        self.driver.maximize_window()
+        # self.driver.maximize_window()
 
     def tearDown(self):
         self.driver.close()
