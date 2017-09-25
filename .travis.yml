@@ -1,9 +1,16 @@
+sudo: required
 language: python
 python:
   - "3.5"
+addons:
+  chrome: stable
 before_install:
   - "sh -e /etc/init.d/xvfb start"
   - "export DISPLAY=:99.0"
+  - wget http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - sudo cp chromedriver /usr/local/bin/.
+  - sleep 3
 install:
   - pip install -r requirements.txt
 script:
