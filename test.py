@@ -34,7 +34,8 @@ class HmmerWebTest(unittest.TestCase):
     hmmer_home_page = "http://wwwdev.ebi.ac.uk/Tools/hmmer/"
 
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
 
     def tearDown(self):
         self.driver.close()
