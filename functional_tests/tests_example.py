@@ -1,4 +1,5 @@
-from test import HmmerWebTest, click_link_and_wait
+from test import HmmerWebTest
+
 
 class HmmerExampleTestCase(HmmerWebTest):
     def test_hmmer_search_example(self):
