@@ -18,3 +18,5 @@ script:
 notifications:
   email:
     - gsalazar@ebi.ac.uk
+    - maq@ebi.ac.uk
+    - luciani@ebi.ac.uk
