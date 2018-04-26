@@ -1,5 +1,5 @@
 from test import HmmerWebTest, click_link_and_wait
-
+import time
 
 class HmmerExampleTestCase(HmmerWebTest):
     def test_hmmer_search_example(self):
@@ -10,7 +10,13 @@ class HmmerExampleTestCase(HmmerWebTest):
         browser.find_element_by_css_selector("#example").click()
         self.assertNotEqual("", textarea.text, "The textarea should NOT be empty after clicking the example link")
 
-        b = browser.find_element_by_id("subbutton") #.submit()
+        try:
+          browser.find_element_by_css_selector("#cookie-banner button").click()
+        except: pass
+
+        b = browser.find_element_by_id("subbutton")
+        browser.execute_script("return arguments[0].scrollIntoView();", b)
+        browser.execute_script("window.scrollBy(0, -150);")
         click_link_and_wait(b)
 
         title = browser.find_element_by_css_selector("div.row div.columns>h5")

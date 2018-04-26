@@ -16,8 +16,15 @@ def wait_for(condition_function):
     )
 
 
-def click_link_and_wait(link):
-    link.click()
+ACTION_CLICK = 1
+ACTION_SUBMIT = 2
+
+
+def click_link_and_wait(link, action=ACTION_CLICK):
+    if action == ACTION_CLICK:
+        link.click()
+    if action == ACTION_SUBMIT:
+        link.submit()
 
     def link_has_gone_stale():
         try:
@@ -31,7 +38,7 @@ def click_link_and_wait(link):
 
 
 class HmmerWebTest(unittest.TestCase):
-    hmmer_home_page = "http://www.ebi.ac.uk/Tools/hmmer/"
+    hmmer_home_page = "http://wwwdev.ebi.ac.uk/Tools/hmmer/"
 
     def setUp(self):
         self.driver = webdriver.Chrome()
