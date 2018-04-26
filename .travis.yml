@@ -17,4 +17,6 @@ script:
   - python -m unittest
 notifications:
   email:
-    - pf-developers@ebi.ac.uk
+    - gsalazar@ebi.ac.uk
+    - maq@ebi.ac.uk
+    - luciani@ebi.ac.uk
