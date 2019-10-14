@@ -1,13 +1,14 @@
 sudo: required
+dist: xenial
+services:
+  - xvfb
 language: python
 python:
   - "3.5"
 addons:
   chrome: stable
 before_install:
-  - "sh -e /etc/init.d/xvfb start"
-  - "export DISPLAY=:99.0"
-  - wget http://chromedriver.storage.googleapis.com/2.38/chromedriver_linux64.zip
+  - wget http://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - sudo cp chromedriver /usr/local/bin/.
   - sleep 3
