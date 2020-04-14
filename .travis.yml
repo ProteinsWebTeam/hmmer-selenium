@@ -8,7 +8,7 @@ services:
 addons:
   chrome: stable
 before_install:
-  - wget http://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip
+  - wget http://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - sudo cp chromedriver /usr/local/bin/.
   - sleep 3
