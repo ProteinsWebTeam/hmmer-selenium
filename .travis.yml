@@ -8,7 +8,7 @@ python:
 addons:
   chrome: stable
 before_install:
-  - wget http://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
+  - wget http://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - sudo cp chromedriver /usr/local/bin/.
   - sleep 3
@@ -20,4 +20,3 @@ notifications:
   email:
     - gsalazar@ebi.ac.uk
     - maq@ebi.ac.uk
-    - luciani@ebi.ac.uk
