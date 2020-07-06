@@ -5,6 +5,9 @@ services:
 language: python
 python:
   - "3.5"
+dist: xenial
+services:
+  - xvfb
 addons:
   chrome: stable
 before_install:
